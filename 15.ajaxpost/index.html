@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        function sendPOSTRequest() {
+        const url = 'https://api.example.com/submit';
+        const data = {
+            name: 'John Doe',
+            email: 'johndoe@example.com'
+        };
+
+        axios.post(url, data)
+            .then(response => {
+            // Handle the response data here
+            console.log(response.data);
+            })
+            .catch(error => {
+            console.error('Error:', error);
+            });
+        }
+
+        // Call the function to send the POST request
+        sendPOSTRequest();
+
+    </script>
+</body>
+</html>

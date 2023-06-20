@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        function sendGETRequest() {
+        const url = 'https://api.example.com/data';
+
+        axios.get(url)
+            .then(response => {
+            // Handle the response data here
+            console.log(response.data);
+            })
+            .catch(error => {
+            console.error('Error:', error);
+            });
+        }
+
+        // Call the function to send the GET request
+        sendGETRequest();
+    </script>
+</body>
+</html>
